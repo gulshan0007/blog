@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+    <head>
+        <title>My Blog</title>
+        <link rel="stylesheet" type="text/css" href="style2.css">
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+<style>
+    a {
+  color: inherit;
+  text-decoration: none;
+}
+
+</style>
+
+
+
+
+    </head>
+    <body>
+        <header>
+            <a href="#">
+                <span><img src="img/logo.svg" width="94px" alt=""></span>
+            </a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Updates</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="stars.png" id="stars">
+            <h2 id="text">My Blog Website</h2>
+            <img src="moon.png" id="moon">
+            
+            <img src="mountains_behind.png" id="mountains_behind">
+            
+            <a href="#sec" id="btn">Explore</a>
+            <img src="mountains_front.png" id="mountains_front">
+        </section>
+        <div class="sec" id="sec">
+            <h2>Welcome Everyone to My Blog Website</h2>
+            <p>Welcome to "My Blog", your ultimate destination for insightful and captivating content! We are thrilled to have you here and can't wait to embark on this exciting journey together.<br><br>
+
+                At "My Blog", we believe that knowledge is power and that sharing ideas can create a positive impact on the world. Our mission is to provide you with a platform where you can explore a wide range of topics, discover new perspectives, and engage in meaningful discussions. Whether you're a seasoned reader or just beginning to dive into the world of blogging, we have something for everyone.<br><br>
+                
+                Our team of passionate and experienced writers is dedicated to delivering high-quality articles that inform, inspire, and entertain. From thought-provoking opinion pieces to practical how-to guides, we cover a diverse array of subjects, including technology, lifestyle, health, travel, finance, and much more. We aim to offer a balanced mix of content that caters to different interests, ensuring there's always something captivating for every reader.<br><br>
+                
+                We believe in the power of storytelling and the ability of words to shape our understanding of the world. Through engaging narratives and insightful analysis, we strive to bring complex ideas to life and make them accessible to all. Whether you're seeking advice, looking for inspiration, or simply want to expand your knowledge, [Your Blog Name] is the ideal place to find it.<br><br>
+                
+                Beyond our articles, we encourage active participation and engagement from our readers. We value your thoughts and opinions, and we're eager to hear your voice. Feel free to leave comments, share your own experiences, and join the conversation. We believe that fostering a sense of community is essential in creating a thriving and enriching online environment.<br><br>
+                
+                Thank you for choosing "My Blog" as your go-to source of information and inspiration. We invite you to embark on this exciting journey with us and explore the vast world of ideas that awaits. Together, let's learn, grow, and make a difference through the power of words.
+            </p>
+            <!-- <button type="button" class="btn btn-primary btn-lg">Large button</button> -->
+            <button type="button" class="btn btn-outline-light"><a href="index.html" >Click here to continue</a></button>
+        </div>
+        
+        
+
+
+        <script>
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let mountains_front = document.getElementById('mountains_front');
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll', function() {
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                moon.style.top = value * 1.05 + 'px';
+                mountains_behind.style.top = value * 0.5 + 'px';
+                mountains_front.style.top = value * 0 + 'px';
+                text.style.marginRight = value * 4 + 'px';
+                text.style.marginTop = value * 1.5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    </body>
+</html>
